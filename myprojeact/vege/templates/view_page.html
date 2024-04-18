@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .recipe {
+            margin-top: 20px;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .recipe img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="container">
+        <h1>{{receipe.receipe_name}}</h1>
+        <div class="recipe">
+            <h2>Description</h2>
+            <p>{{receipe.receipe_description}} </p>
+            <img src="{{receipe.receipe_image.url}}" class="img-fluid img-thumbnail"  style="width: 400px; height: 400px; object-fit:cover;"  alt="Recipe Image">
+        </div>
+    </div>
+</body>
+</html>
