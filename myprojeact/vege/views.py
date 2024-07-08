@@ -28,8 +28,9 @@ def receipe(request):
     receipe_image = request.FILES.get('receipe_image')
     print(receipe_name)
     print(receipe_description)
-    Receipe.objects.create(receipe_name=receipe_name, receipe_description=receipe_description, receipe_image=receipe_image,user=request.user)
-    if(receipe_name and receipe_description ):
+    Receipe.objects.create(receipe_name=receipe_name, receipe_description=receipe_description,  receipe_image=receipe_image,user=request.user)
+    
+    if(receipe_name and receipe_description and receipe_image):
         messages.success(request, 'Receipe added successfully')
 
     return redirect('receipe')
